@@ -19,12 +19,13 @@ const router = createBrowserRouter([
     },
     {
         path: '/utilzadores',
-        element: <Pag2 />
-    },
-
-    {
-        path: '/utilzadores/:userId',
-        element: <Detalhes />
+        element: <Pag2 />,
+        children: [
+            {
+                path: '/utilzadores/:userId',
+                element: <Detalhes />
+            }
+        ]
     },
 ])
 

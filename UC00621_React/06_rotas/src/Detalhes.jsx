@@ -1,11 +1,12 @@
+import { useParams } from "react-router-dom";
 
-
-function Detalhes({ id }) {
+function Detalhes() {
+    const params = useParams();
     return (
         <>
 
             <h1>Detalhe: </h1>
-            <p> user id: {id} </p>
+            <p> user id: { params.userId } </p>
 
         </>
     );
